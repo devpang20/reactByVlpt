@@ -62,9 +62,9 @@ function TodoItem({ id, done, text }) {
         <TodoItemBlock>
             <CheckCircle done={done}>{done && <MdDone />}</CheckCircle>
             <Text done={done}>{text}</Text>
-            <remove>
+            <Remove>
                 <MdDelete />
-            </remove>
+            </Remove>
         </TodoItemBlock>
     );
 }

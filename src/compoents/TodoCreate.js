@@ -88,7 +88,7 @@ function TodoCreate() {
                     </InsertForm>
                 </InsertFormPositioner>
             )}
-            <CircleButton onClikc={onToggle} open={open}>
+            <CircleButton onClick={onToggle} open={open}>
                 <MdAdd />
             </CircleButton>
         </>
