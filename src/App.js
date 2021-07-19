@@ -1,25 +1,27 @@
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
-import TodoTemplate from "./compoents/TodoTemplate";
-import TodoHead from "./compoents/TodoHead";
-import TodoList from "./compoents/TodoList";
-import TodoCreate from './compoents/TodoCreate';
+import Mycomponent from './MyComponent';
+import Counter from './Counter';
+import EventPractice from './EventPractice';
 
-const GlobalStyle = createGlobalStyle`
-  body {
-    background: #e9ecef;
-  }
-`;
+// const GlobalStyle = createGlobalStyle`
+//   body {
+//     background: #e9ecef;
+//   }
+// `;
 
-function App() {
+const App = () => {
     return (
         <>
-            <GlobalStyle />
+            {/* <GlobalStyle />
             <TodoTemplate>
                 <TodoHead />
                 <TodoList />
                 <TodoCreate />
-            </TodoTemplate>
+            </TodoTemplate> */}
+            <EventPractice />
+            <Mycomponent name="React" favoriteNumber={1}>리엑트</Mycomponent>
+            <Counter></Counter>
         </>
     );
 }
