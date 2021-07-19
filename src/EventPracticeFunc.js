@@ -7,7 +7,7 @@ const EventPractice = () => {
     const onChangeMessage = e => setMessage(e.target.value);
     const onClick = () => {
         alert(username + ':' + message);
-        sertUsername('');
+        setUsername('');
         setMessage('');
     };
 
@@ -23,7 +23,7 @@ const EventPractice = () => {
             <input 
                 type="text"
                 name="username"
-                placehoder="사용자명"
+                placeholder="사용자명"
                 value={username}
                 onChange={onChangeUsername}
             />
@@ -35,7 +35,7 @@ const EventPractice = () => {
                 onChange={onChangeMessage}
                 onKeyPress={onKeyPress}
             />
-            <button onClick={onClick}></button>
+            <button onClick={onClick}>확인</button>
         </div>
     );
 };
