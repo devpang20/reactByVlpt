@@ -1,7 +1,7 @@
 import React from 'react';
 
 const App = () => {
-    <div>todo-app make</div>
+    <div>just make todo-app</div>
 }
 
 export default App;
