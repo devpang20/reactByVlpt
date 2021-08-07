@@ -1,8 +1,46 @@
-## react fundamentals
+# react fundamentals
 
 - Todo App 만들기 예제소스
+- TodoApp 만들기 튜토리얼 셋업용
 
-### How to Todo App
+## 파일 설명
+
+- 경로 (root)/src/
+
+```
+├── App.css
+├── App.js => 작업을 해야할 App 파일 AppSkeleton.js 기초 코드를 받아와 시작
+├── AppComplete.js => 완료된 App 소스 파일
+├── AppSkeleton.js => 작업의 뼈대가 되는 App 소스 파일
+├── completeComponents => 완료된 컴포넌트 소스 디렉토리
+│   ├── TodoInsert.js
+│   ├── TodoList.js
+│   ├── TodoListItem.js
+│   └── TodoTemplate.js
+├── components => 작업을 해야할 컴포넌트 디렉토리 skeletonComponents 디렉토리에서 기초코드를 받아와서 시작
+│   ├── TodoInsert.js
+│   ├── TodoList.js
+│   ├── TodoListItem.js
+│   └── TodoTemplate.js
+├── exercise => 클래스형 컴포넌트 연습 소스 디렉토리(무시)
+├── index.css
+├── index.js
+├── skeletonComponents => 작업의 뼈대가 되는 소스 디렉토리
+│   ├── TodoInsert.js
+│   ├── TodoList.js
+│   ├── TodoListItem.js
+│   └── TodoTemplate.js
+└── styles => 스타일 소스 스타일은 이 디렉토리에서 import
+├── TodoInsert.scss
+├── TodoList.scss
+├── TodoListItem.scss
+└── TodoTemplate.scss
+
+```
+
+- skeletonComponents에 doxygen 으로 힌트를 주었으니 참고하여 개발 하면 됨
+
+## How to Todo App Guide
 
 ## UI 구성하기
 
@@ -30,3 +68,8 @@
 
 - App > .map(), useCallback() 사용
 - onToggle 구현 후 props 전달
+
+## ref)
+
+[벨로퍼트님의 todoapp 만들기 자료1](https://velopert.com/3480)
+[벨로퍼트님의 todoapp 만들기 자료2](https://react.vlpt.us/mashup-todolist/)
