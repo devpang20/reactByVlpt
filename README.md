@@ -71,5 +71,6 @@
 
 ## ref)
 
-[벨로퍼트님의 todoapp 만들기 자료1](https://velopert.com/3480)
-[벨로퍼트님의 todoapp 만들기 자료2](https://react.vlpt.us/mashup-todolist/)
+- [벨로퍼트님의 todoapp 만들기 자료1](https://velopert.com/3480)
+- [벨로퍼트님의 todoapp 만들기 자료2](https://react.vlpt.us/mashup-todolist/)
+- [벨로퍼트님의 todoapp 만들기 자료3](http://www.yes24.com/Product/Goods/78233628)
