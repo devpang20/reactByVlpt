@@ -55,18 +55,18 @@
 
 ### 항목 추가 기능 구현
 
-- App > useRef(), useCallback() 사용 => prop 로 보내기
-- App 에서 onInsert 구현 useRef(), useCallback 사용
+- App > useRef() 사용 => prop 로 보내기
+- App 에서 onInsert 구현 useRef() 사용
 - TodoInsert 에서 onInsert 사용
 
 ### 지우기 구현
 
-- App > .filter(), useCallback() 사용
+- App > .filter() 사용
 - onRemove 구현 후 props 전달
 
 ### 체크박스 토글 구현
 
-- App > .map(), useCallback() 사용
+- App > .map() 사용
 - onToggle 구현 후 props 전달
 
 ## ref)
