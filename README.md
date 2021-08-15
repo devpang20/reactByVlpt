@@ -22,7 +22,6 @@
 │   ├── TodoList.js
 │   ├── TodoListItem.js
 │   └── TodoTemplate.js
-├── exercise => 클래스형 컴포넌트 연습 소스 디렉토리(무시)
 ├── index.css
 ├── index.js
 ├── skeletonComponents => 작업의 뼈대가 되는 소스 디렉토리
