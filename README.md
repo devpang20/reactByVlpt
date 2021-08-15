@@ -1,45 +1,33 @@
 # react fundamentals
 
-- Todo App 만들기 예제소스
-- TodoApp 만들기 튜토리얼 셋업용
+- react hook로 Todo App 만들기 예제소스
 
 ## 파일 설명
 
 - 경로 (root)/src/
 
 ```
+├── public
+    ├── index.html
+    └── indexTemplate.html => 스타일 구조 파악용 탬플릿 html 파일
+├── components
+│   ├── TodoInsert.js
+│   ├── TodoList.js
+│   ├── TodoListItem.js
+│   └── TodoTemplate.js
 ├── App.css
-├── App.js => 작업을 해야할 App 파일 AppSkeleton.js 기초 코드를 받아와 시작
-├── AppComplete.js => 완료된 App 소스 파일
-├── AppSkeleton.js => 작업의 뼈대가 되는 App 소스 파일
-├── completeComponents => 완료된 컴포넌트 소스 디렉토리
-│   ├── TodoInsert.js
-│   ├── TodoList.js
-│   ├── TodoListItem.js
-│   └── TodoTemplate.js
-├── components => 작업을 해야할 컴포넌트 디렉토리 skeletonComponents 디렉토리에서 기초코드를 받아와서 시작
-│   ├── TodoInsert.js
-│   ├── TodoList.js
-│   ├── TodoListItem.js
-│   └── TodoTemplate.js
+├── App.js
 ├── index.css
 ├── index.js
-├── skeletonComponents => 작업의 뼈대가 되는 소스 디렉토리
-│   ├── TodoInsert.js
-│   ├── TodoList.js
-│   ├── TodoListItem.js
-│   └── TodoTemplate.js
 └── styles => 스타일 소스 스타일은 이 디렉토리에서 import
-├── TodoInsert.scss
-├── TodoList.scss
-├── TodoListItem.scss
-└── TodoTemplate.scss
+    ├── TodoInsert.scss
+    ├── TodoList.scss
+    ├── TodoListItem.scss
+    └── TodoTemplate.scss
 
 ```
 
-- skeletonComponents에 doxygen 으로 힌트를 주었으니 참고하여 개발 하면 됨
-
-## How to Todo App Guide
+## How to Todo App
 
 ## UI 구성하기
 
@@ -68,8 +56,10 @@
 - App > .map() 사용
 - onToggle 구현 후 props 전달
 
+> 자세한 설명은 포스팅을 참고(url 참조예정)
+
 ## ref)
 
-- [벨로퍼트님의 todoapp 만들기 자료1](https://velopert.com/3480)
-- [벨로퍼트님의 todoapp 만들기 자료2](https://react.vlpt.us/mashup-todolist/)
-- [벨로퍼트님의 todoapp 만들기 자료3](http://www.yes24.com/Product/Goods/78233628)
+- [리액트 공식 홈페이지](https://reactjs.org/)
+- [리엑트를 다루는 기술](http://www.yes24.com/Product/Goods/78233628)
+- [벨로퍼트와 함께하는 모던 리액트](https://react.vlpt.us/)

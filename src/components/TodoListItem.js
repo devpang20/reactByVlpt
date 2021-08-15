@@ -1,8 +1,16 @@
-// import cn from 'classnames';
-// import { MdCheckBoxOutlineBlank, MdCheckBox, MdRemoveCircleOutline } from 'react-icons/md'
-// import '../styles/TodoListItem.scss';
+import React from 'react';
 
-/**
- * components
- * div.TodoListItem > div.checkbox > div.text div.remove
- */
+const TodoListItem = ({ todo, onToggle, onDelete }) => {
+  const { id, text, checked } = todo;
+
+  return (
+    <div>
+      ({id})
+      <input type="checkbox" checked={checked} onChange={() => onToggle(id)} />
+      <span>{text}</span>
+      <button onClick={() => onDelete(id)}>삭제</button>
+    </div>
+  );
+};
+
+export default TodoListItem;

@@ -1,6 +1,7 @@
-// import '../styles/TodoTemplate.scss';
+import React from 'react';
 
-/**
- * components
- * div.TodoTemplate > div.app-title  div.content
- */
+const TodoTemplate = ({ children }) => {
+  return <div>{children}</div>;
+};
+
+export default TodoTemplate;
