@@ -19,12 +19,7 @@
 ├── App.js
 ├── index.css
 ├── index.js
-└── styles => 스타일 소스 스타일은 이 디렉토리에서 import
-    ├── TodoInsert.scss
-    ├── TodoList.scss
-    ├── TodoListItem.scss
-    └── TodoTemplate.scss
-
+└── legacy => 레거시 Todo App 코드
 ```
 
 ## How to Todo App
@@ -42,14 +37,14 @@
 
 ### 항목 추가 기능 구현
 
-- App > useRef() 사용 => prop 로 보내기
-- App 에서 onInsert 구현 useRef() 사용
+- App 에서 onInsert 구현
+- useRef() 사용해 컴포넌트 안의 변수 만들기
 - TodoInsert 에서 onInsert 사용
 
 ### 지우기 구현
 
 - App > .filter() 사용
-- onRemove 구현 후 props 전달
+- onDelete 구현 후 props 전달
 
 ### 체크박스 토글 구현
 
