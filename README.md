@@ -26,35 +26,29 @@
 
 ## UI 구성하기
 
-- 순서: todoTemplate > TodoInsert > TodoListItem > TodoList
+- 관계:
+  - todoTemplate
+    - TodoInsert
+    - TodoList
+      - TodoListItem
 
-## 기능 구현하기
+## 기능(이름)
 
-### 리스트 뷰 기능 구현
+- 리스트 뷰 기능 구현
+- 항목 추가 기능 구현(onInsert)
+- 지우기 기능 구현(onDelete)
+- 체크박스 토글 기능 구현(onToggle)
 
-- App > 가데이터 생성 => useState() 사용 => TodoList에 props 전달
-- TodoList에서 .map 으로 TodoListItem에 props 전달
+## 사용 키워드 및 함수
 
-### 항목 추가 기능 구현
-
-- App 에서 onInsert 구현
-- useRef() 사용해 컴포넌트 안의 변수 만들기
-- TodoInsert 에서 onInsert 사용
-
-### 지우기 구현
-
-- App > .filter() 사용
-- onDelete 구현 후 props 전달
-
-### 체크박스 토글 구현
-
-- App > .map() 사용
-- onToggle 구현 후 props 전달
+- hooks > useState, useRef
+- .map()
+- .filter()
 
 > 자세한 설명은 포스팅을 참고(url 참조예정)
 
 ## ref)
 
 - [리액트 공식 홈페이지](https://reactjs.org/)
-- [리엑트를 다루는 기술](http://www.yes24.com/Product/Goods/78233628)
+- [리액트를 다루는 기술](http://www.yes24.com/Product/Goods/78233628)
 - [벨로퍼트와 함께하는 모던 리액트](https://react.vlpt.us/)
