@@ -13,7 +13,6 @@ const App = () => {
 
   /**
    *  add onInsert
-   *  use useCallback
    *  use setTodos
    */
 
