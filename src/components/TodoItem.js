@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 
 class TodoItem extends Component {
+    shouldComponentUpdate(nextProps, nextState) {
+        return this.props.done !== nextProps.done;
+    }
+
     render() {
         const {done, children, onToggle, onRemove} = this.props;
         
