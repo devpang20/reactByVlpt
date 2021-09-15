@@ -1,60 +1,91 @@
-import React, { useState, useRef } from 'react';
-import TodoInsert from './components/TodoInsert';
+import React, { Component } from 'react';
+import PageTemplate from './components/PageTemplate';
+import TodoInput from './components/TodoInput';
 import TodoList from './components/TodoList';
-import TodoTemplate from './components/TodoTemplate';
 
-const App = () => {
-  const [todos, setTodos] = useState([
-    {
-      id: 1,
-      text: '숨쉬기',
-      checked: true,
-    },
-    {
-      id: 2,
-      text: '밥먹기',
-      checked: true,
-    },
-    {
-      id: 3,
-      text: '달리기',
-      checked: false,
-    },
-  ]);
+class App extends Component {
 
-  const nextId = useRef(3);
+  state = {
+    input: '',
+    todos: [
+      {id: 0, text: 'test', done: true},
+      {id: 1, text: 'test2', done: true},
+    ]
+  }
 
-  const onInsert = (text) => {
-    setTodos(
-      todos.concat([
-        {
-          id: nextId.current + 1,
-          text,
-          checked: false,
-        },
-      ]),
+  id = 1
+  getId = () => {
+    return ++this.id;
+  }
+
+  handleChange = (e) => {
+    const { value } = e.target;
+    this.setState({
+      input: value
+    });
+  }
+
+  handleInsert = () => {
+    const { todos, input } = this.state;
+
+    const newTodo = {
+      text: input,
+      done: false,
+      id: this.getId()
+    }
+    this.setState({
+      todos: [...todos, newTodo],
+      input: '' 
+    })
+  }
+
+  handleToggle = (id) => {
+    const { todos } = this.state;
+    const index = todos.findIndex(todo => todo.id === id);
+
+    const toggled = {
+      ...todos[index],
+      done: !todos[index].done
+    }
+
+    this.setState({
+      todos: [
+        ...todos.slice(0, index),
+        toggled,
+        ...todos.slice(index + 1, todos.length)
+      ]
+    })
+  }
+
+  handleRemove = (id) => {
+    const { todos } = this.state;
+    const index = todos.findIndex(todo => todo.id === id);
+    
+    this.setState({
+      todos: [
+        ...todos.slice(0, index),
+        ...todos.slice(index + 1, todos.length)
+      ]
+    });
+  }
+
+
+  render() {
+    const { input, todos } = this.state;
+    const {
+      handleChange,
+      handleInsert,
+      handleToggle,
+      handleRemove
+    } = this;
+
+    return (
+      <PageTemplate>
+        <TodoInput onChange={handleChange} onInsert={handleInsert} value={input} />
+        <TodoList todos={todos} onToggle={handleToggle} onRemove={handleRemove} />
+      </PageTemplate>
     );
-    nextId.current++;
-  };
-
-  const onToggle = (id) => {
-    setTodos(
-      todos.map((todo) =>
-        todo.id === id ? { ...todo, checked: !todo.checked } : todo,
-      ),
-    );
-  };
-
-  const onDelete = (id) => {
-    setTodos(todos.filter((todo) => todo.id !== id));
-  };
-
-  return (
-    <TodoTemplate>
-      <TodoInsert onInsert={onInsert} />
-      <TodoList todos={todos} onToggle={onToggle} onDelete={onDelete} />
-    </TodoTemplate>
-  );
-};
+  }
+}
 
 export default App;
